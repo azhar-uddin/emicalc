@@ -1,3 +1,41 @@
 // Place all the styles related to the emicalc controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	background-color: #F5F7FF;
+}
+
+#box {
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 50%;
+	min-height: 600px;
+	text-align: center;
+	border: 2px solid gray;
+	border-radius: 5px;
+	h1 {
+		background-color: #0072aa;
+	    margin: 0;
+	    padding: 15px;
+	    font-size: 3vw;
+	}
+	form {
+		padding: 1.5vw;
+		label {
+			font-size: 1.5vw;
+		}
+		input {
+			width: 25vw;
+			border-radius: 5px;
+    		padding: 0.4vw;
+    		font-size: 1.5vw;
+		}
+	}
+	#error_explanation h2 {
+		font-size: 2vw;
+	}
+	#results h2 {
+		font-size: 2.5vw;
+	}
+}

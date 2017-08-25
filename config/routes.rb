@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'emicalc/calc'
-  post 'emicalc/calc'
+  post "/" => "emicalc#calc"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
