@@ -1,0 +1,32 @@
+<h1>Loan EMI Calculator</h1>
+<%= form_for :calculator do |f| %>
+  <p>
+    <%= f.label :principal %><br>
+    <%= f.text_field :principal, :value => @principal %>
+  </p>
+ 
+  <p>
+    <%= f.label :term, "Loan Term (In Months)" %><br>
+    <%= f.text_field :term, :value => @term %>
+  </p>
+
+  <p>
+    <%= f.label :interest %><br>
+    <%= f.text_field :interest, :value => @rate %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Calculate EMI" %>
+  </p>
+<% end %>
+<% if @message %>
+  <div id="error_explanation">
+    <h2>
+      <%= @message %>
+    </h2>
+  </div>
+<% elsif @result %>
+  <p><%= "Loan EMI =  #{@result}" %></p>
+  <p><%= "Total interest payable = #{@intrst}" %></p>
+  <p><%= "Total payment = #{@amount}" %></p>
+<% end %>

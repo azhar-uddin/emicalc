@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emi Calculator</title>
+  <title><%= @meta_title ? @meta_title : ApplicationController::BRAND_NAME %></title>
+  <% if @meta_description.present? %>
+    <meta name="description" content="<%= @meta_description %>">
+  <% end %>
+  <% if @meta_keywords.present? %>
+    <meta name="keywords" content="<%= @meta_keywords %>">
+  <% end %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
+</html>
